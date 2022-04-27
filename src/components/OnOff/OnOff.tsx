@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 type OnOffPropsType = {
     on: boolean
@@ -9,6 +9,8 @@ type OnOffPropsType = {
 
 const OnOff = (props: OnOffPropsType) => {
 
+    const onClicked = () =>{props.onChange(true);}
+    const offClicked = () => {props.onChange(false);}
 
     const onStyle = {
         width: '30px',
@@ -37,10 +39,10 @@ const OnOff = (props: OnOffPropsType) => {
 
     return (
         <div>
-            <div style={onStyle} onClick={() => {props.onChange(true);}}>
+            <div style={onStyle} onClick={onClicked}>
                 On
             </div>
-            <div style={offStyle} onClick={() => {props.onChange(false);}}>
+            <div style={offStyle} onClick={offClicked}>
                 Off
             </div>
             <div style={indicatorStyle}></div>

@@ -18,11 +18,13 @@ function Accordion(props: AccordionPropsType) {
 
 function AccordionTitle(props: AccordionPropsType) {
     console.log('AccordionTitle rendering')
-    debugger
+const onExpanded = () => {props.onClick(!props.collapsed)}
+    
+    
+    
     {
         return (
-
-            <h3 onClick={()=>{props.onClick(!props.collapsed)}}>-- {props.titleValue} --</h3>
+            <h3 onClick={onExpanded}>-- {props.titleValue} --</h3>
         )
     }
 }
