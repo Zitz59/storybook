@@ -1,13 +1,13 @@
 import React from 'react';
 
-type OnOffPropsType = {
+export type OnOffPropsType = {
     on: boolean
     onChange:(on:boolean)=>void
 
 }
 
 
-const OnOff = (props: OnOffPropsType) => {
+export const OnOff = (props: OnOffPropsType) => {
 
     const onClicked = () =>{props.onChange(true);}
     const offClicked = () => {props.onChange(false);}
@@ -53,4 +53,3 @@ const OnOff = (props: OnOffPropsType) => {
 };
 
 
-export default OnOff;
