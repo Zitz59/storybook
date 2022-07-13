@@ -34,7 +34,7 @@ function Star(props: StarPropsType) {
         debugger
         props.onClick(props.value)
     }}>
-        {props.selected ? <b>star</b> : 'star'}
+        {props.selected ? <b>star </b> : 'star '}
     </span>
 }
 
